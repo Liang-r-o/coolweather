@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_default_color_primary_dark">
+<!--     android:scaleType="center" 以原图的几何中心点和ImagView的几何中心点为基准,按图片的原来size居中显示，不缩放，当图片长/宽超过View的长/宽，
+则截取图片的居中部分显示ImageView的size.当图片小于View 的长宽时，只显示图片的size,不剪裁。 2-->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bing_pic_img"
+        android:scaleType="centerCrop"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/weather_layout"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/title"/>
+            <include layout="@layout/now"/>
+            <include layout="@layout/forecast"/>
+            <include layout="@layout/aqi"/>
+            <include layout="@layout/suggestion"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</FrameLayout>
