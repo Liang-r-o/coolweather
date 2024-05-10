@@ -41,5 +41,6 @@ dependencies {
     implementation 'org.litepal.guolindev:core:3.2.3'
     implementation libs.okhttp
     implementation libs.glide
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 
 }
